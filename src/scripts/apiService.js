@@ -27,20 +27,27 @@ class ApiService {
   }
 
   /**
-   * Example method to send page data
-   * @param {string} url - The current page URL
-   * @param {string} title - The current page title
+   * Sends page data to the API
+   * @param {Object} pageData - The page data to send
+   * @param {string} pageData.url - The page URL
+   * @param {string} pageData.title - The page title
+   * @param {string} [pageData.content] - The page content (optional)
+   * @param {string} [pageData.timestamp] - The timestamp (defaults to now)
+   * @param {string} [pageData.userAgent] - The user agent (defaults to current)
    * @returns {Promise<Object>} The API response
    */
-  static async sendPageData(url, title) {
-    const endpoint = 'https://api.example.com/collect'; // Replace with your actual API endpoint
+  static async sendPageData(pageData) {
+    const endpoint = 'https://app-ide-68d34054-32af-45f1-8381-a87520e91f5a.demo.quix.io/collect'; // Quix service endpoint
+    
+    // Prepare the data with defaults
     const data = {
-      url,
-      title,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent
+      url: pageData.url,
+      title: pageData.title,
+      content: pageData.content || '',
+      timestamp: pageData.timestamp || new Date().toISOString(),
+      userAgent: pageData.userAgent || navigator.userAgent
     };
-
+    console.log(data);
     return this.post(endpoint, data);
   }
 }

@@ -11,9 +11,24 @@
       "128": "src/icons/icon128.png"
     }
   },
-  "permissions": ["activeTab", "<all_urls>"],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "scripting"
+  ],
   "host_permissions": [
     "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/scripts/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/scripts/content.js"]
+    }
   ],
   "icons": {
     "16": "src/icons/icon16.png",

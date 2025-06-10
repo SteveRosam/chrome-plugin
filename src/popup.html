@@ -7,18 +7,32 @@
 </head>
 <body>
   <div class="container">
-    <h1>Page Data Sender</h1>
-    <p class="description">Send current page data to your API endpoint</p>
-    <button id="actionButton" class="primary-btn">
-      <span class="btn-icon">📤</span>
-      Send Page Data
-    </button>
-    <div id="status" class="status-message">Ready to send data</div>
+    <h1>Page Scraper</h1>
+    <p class="description">Scrape and send page content to your API</p>
+    
+    <div class="controls">
+      <button id="scrapeButton" class="primary-btn">
+        <span class="btn-icon">🔍</span>
+        <span id="scrapeButtonText">Scrape This Page</span>
+      </button>
+      
+      <div class="toggle-container">
+        <label class="toggle">
+          <input type="checkbox" id="autoScrapeToggle">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label">Auto-scrape on navigation</span>
+      </div>
+    </div>
+    
+    <div id="status" class="status-message">Ready to scrape</div>
+    
     <div class="info-box">
       <h3>What's being sent:</h3>
       <ul>
-        <li>Current page URL</li>
+        <li>Page URL</li>
         <li>Page title</li>
+        <li>Page content (first 10,000 chars)</li>
         <li>Timestamp</li>
         <li>User agent</li>
       </ul>
