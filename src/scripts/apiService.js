@@ -38,7 +38,7 @@ class ApiService {
    */
   static async sendPageData(pageData) {
     const endpoint = 'https://app-ide-68d34054-32af-45f1-8381-a87520e91f5a.demo.quix.io/collect'; // Quix service endpoint
-    
+
     // Prepare the data with defaults
     const data = {
       url: pageData.url,

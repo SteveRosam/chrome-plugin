@@ -123,6 +123,103 @@ input:checked + .toggle-slider:before {
   cursor: pointer;
 }
 
+/* Website Management */
+.website-management {
+  margin: 16px 0;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.website-management h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #3c4043;
+  font-weight: 500;
+}
+
+.add-website {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.add-website input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+}
+
+.add-website input[type="text"]:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.add-website .primary-btn {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.website-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+}
+
+.website-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.website-item:last-child {
+  border-bottom: none;
+}
+
+.website-item .url {
+  flex: 1;
+  font-size: 13px;
+  color: #202124;
+  word-break: break-all;
+  padding-right: 8px;
+}
+
+.website-item .toggle {
+  margin: 0 8px 0 0;
+}
+
+.website-item .remove-btn {
+  background: none;
+  border: none;
+  color: #d93025;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.website-item .remove-btn:hover {
+  background: #fce8e6;
+}
+
+.website-item .toggle-label {
+  margin: 0;
+}
+
+.no-websites {
+  padding: 16px;
+  text-align: center;
+  color: #5f6368;
+  font-size: 13px;
+}
+
 .status-message {
   font-size: 13px;
   padding: 8px 12px;
