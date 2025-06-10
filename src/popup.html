@@ -7,10 +7,23 @@
 </head>
 <body>
   <div class="container">
-    <h1>My Extension</h1>
-    <button id="actionButton">Click Me</button>
-    <div id="status"></div>
+    <h1>Page Data Sender</h1>
+    <p class="description">Send current page data to your API endpoint</p>
+    <button id="actionButton" class="primary-btn">
+      <span class="btn-icon">📤</span>
+      Send Page Data
+    </button>
+    <div id="status" class="status-message">Ready to send data</div>
+    <div class="info-box">
+      <h3>What's being sent:</h3>
+      <ul>
+        <li>Current page URL</li>
+        <li>Page title</li>
+        <li>Timestamp</li>
+        <li>User agent</li>
+      </ul>
+    </div>
   </div>
-  <script src="scripts/popup.js"></script>
+  <script type="module" src="scripts/popup.js"></script>
 </body>
 </html>
